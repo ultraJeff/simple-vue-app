@@ -13,3 +13,4 @@ RUN npm run build \
 FROM nginxinc/nginx-unprivileged:stable-alpine as production-stage
 USER 1001
 COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 8080
